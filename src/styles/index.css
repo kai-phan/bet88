@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import "node_modules/@glidejs/glide/dist/css/glide.core.min.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .container-fluid {
+        @apply tablet:container desktop:container mx-auto mobile:p-4 tablet:p-8;
+    }
+}
+
+:root {
+    --color-foreground: theme('colors.foreground');
+    --color-green-primary: theme('colors.green.primary');
+    --color-blue: theme('colors.blue.DEFAULT');
+    --color-red-1: theme('colors.red.1');
+    --color-red-2: theme('colors.red.2');
+    --color-azure-18: theme('colors.azure.18');
+    --color-azure-84: theme('colors.azure.84');
+}
+
+html {
+    background-color: var(--color-foreground);
+    color: white;
+}
+
+.slide--active3d {
+    transform: scale(0.8);
+    opacity: 0.3;
+    transition: 1s;
+}
